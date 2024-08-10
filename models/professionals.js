@@ -5,7 +5,7 @@ const professionalsSchema = new mongoose.Schema({
     FirstName: { type: String, required: true },
     LastName: { type: String, required: true },
     Sex: {type: String },
-    Applications: [{ type: Number, type: String }],
+    ApplicationID: { type: Number, required: true},
     Resume: { type: String, required: true }
 });
 

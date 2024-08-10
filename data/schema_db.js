@@ -1,6 +1,6 @@
 export const typeDefs = `#graphql
     type Employers {
-        EmployerID: ID!,
+        EmployerID: Int!,
         CompanyName: String!,
         ContactName: String,
         ContactTitle: String,
@@ -12,7 +12,7 @@ export const typeDefs = `#graphql
     }
 
     type Professionals {
-        ProfessionalID: ID!,
+        ProfessionalID: Int!,
         FirstName: String!,
         LastName: String!,
         Professions: [String]!,
@@ -21,8 +21,8 @@ export const typeDefs = `#graphql
     }
 
     type JobPosting {
-        JobPostingID: ID!,
-        EmployerID: ID!,
+        JobPostingID: Int!,
+        EmployerID: Int!,
         Employers: Employers!,
         Title: String!,
         Description: String!,
@@ -33,7 +33,7 @@ export const typeDefs = `#graphql
     }
 
     type Application {
-        ApplicationID: ID!,
+        ApplicationID: Int!,
         Professionals: [Professionals]!,
         JobPostings: [JobPosting]!,
         ApplicationDate: String!,
@@ -42,32 +42,32 @@ export const typeDefs = `#graphql
 
     type Query {
         employers: [Employers]!,
-        employer(EmployerID: ID!): Employers,
+        employer(EmployerID: Int!): Employers,
 
         professionals: [Professionals]!,
-        professional(ProfessionalID: ID!): Professionals,
+        professional(ProfessionalID: Int!): Professionals,
 
         jobPostings: [JobPosting]!,
-        jobPosting(JobPostingID: ID!): JobPosting,
+        jobPosting(JobPostingID: Int!): JobPosting,
 
         applications: [Application]!,
-        application(ApplicationID: ID!): Application
+        application(ApplicationID: Int!): Application
     }
     type Mutation {
-        addEmployer(EmployerID: ID!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employers,
-        addProfessional(ProfessionalID: ID!, FirstName: String!, LastName: String!, Email: String!, Phone: String, Address: String, Professions: [String]!, ResumeXML: String!): Professionals,
-        addJobPosting(JobPostingID: ID!, EmployerID: ID!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
-        addApplication(ApplicationID: ID!, ProfessionalID: ID!, JobPostingID: ID!, ApplicationDate: String!): Application,
+        addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employers,
+        addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Email: String!, Phone: String, Address: String, Professions: [String]!, ResumeXML: String!): Professionals,
+        addJobPosting(JobPostingID: Int!, EmployerID: Int!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
+        addApplication(ApplicationID: Int!, ProfessionalID: Int!, JobPostingID: Int!, ApplicationDate: String!): Application,
 
-        updateEmployer(EmployerID: ID!, CompanyName: String, ContactName: String, ContactTitle: String, Industry: String, Country: String, City: String, Address: String): Employers,
-        updateProfessional(ProfessionalID: ID!, FirstName: String, LastName: String, Email: String, Phone: String, Address: String, Professions: [String], ResumeXML: String): Professionals,
-        updateJobPosting(JobPostingID: ID!, EmployerID: ID, Title: String, Description: String, Requirements: [String], Location: String, PostedDate: String, ExpiryDate: String): JobPosting,
-        updateApplication(ApplicationID: ID!, ProfessionalID: ID, JobPostingID: ID, ApplicationDate: String, Status: String): Application,
+        updateEmployer(EmployerID: Int!, CompanyName: String, ContactName: String, ContactTitle: String, Industry: String, Country: String, City: String, Address: String): Employers,
+        updateProfessional(ProfessionalID: Int!, FirstName: String, LastName: String, Email: String, Phone: String, Address: String, Professions: [String], ResumeXML: String): Professionals,
+        updateJobPosting(JobPostingID: Int!, EmployerID: Int, Title: String, Description: String, Requirements: [String], Location: String, PostedDate: String, ExpiryDate: String): JobPosting,
+        updateApplication(ApplicationID: Int!, ProfessionalID: Int, JobPostingID: Int, ApplicationDate: String, Status: String): Application,
 
-        deleteEmployer(EmployerID: ID!): Employers,
-        deleteProfessional(ProfessionalID: ID!): Professionals,
-        deleteJobPosting(JobPostingID: ID!): JobPosting,
-        deleteApplication(ApplicationID: ID!): Application
+        deleteEmployer(EmployerID: Int!): Employers,
+        deleteProfessional(ProfessionalID: Int!): Professionals,
+        deleteJobPosting(JobPostingID: Int!): JobPosting,
+        deleteApplication(ApplicationID: Int!): Application
     }
 
 `;
