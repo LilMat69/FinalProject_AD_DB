@@ -1,20 +1,20 @@
 import mongoose from 'mongoose';
 
 // Import models
-const Employer = mongoose.model('Employer');
-const Professional = mongoose.model('Professional');
+const Employers = mongoose.model('Employers');
+const Professionals = mongoose.model('Professionals');
 const JobPosting = mongoose.model('JobPosting');
 const Application = mongoose.model('Application');
 
 export const resolvers = {
     Query: {
         // Fetch all employers or a specific employer
-        employers: async () => await Employer.find({}),
-        employer: async (parent, { EmployerID }) => await Employer.findById(EmployerID),
+        employers: async () => await Employers.find({}),
+        employers: async (parent, { EmployerID }) => await Employers.findById(EmployerID),
 
         // Fetch all professionals or a specific professional
-        professionals: async () => await Professional.find({}),
-        professional: async (parent, { ProfessionalID }) => await Professional.findById(ProfessionalID),
+        professionals: async () => await Professionals.find({}),
+        professionals: async (parent, { ProfessionalID }) => await Professionals.findById(ProfessionalID),
 
         // Fetch all job postings or a specific job posting
         jobPostings: async () => await JobPosting.find({}),
@@ -24,30 +24,31 @@ export const resolvers = {
         applications: async () => await Application.find({}),
         application: async (parent, { ApplicationID }) => await Application.findById(ApplicationID),
     },
-    Employer: {
+    Employers: {
         // Resolve the job postings for each employer
-        JobPostings: async (employer) => await JobPosting.find({ EmployerID: employer.EmployerID })
+        JobPostings: async (employers) => await JobPosting.find({ EmployerID: employers.EmployerID })
     },
-    Professional: {
+    Professionals: {
         // Resolve the applications for each professional
-        Applications: async (professional) => await Application.find({ ProfessionalID: professional.ProfessionalID })
+        Applications: async (professionals) => await Application.find({ ProfessionalID: professionals.ProfessionalID })
     },
     JobPosting: {
         // Resolve the employer details for each job posting
-        Employer: async (jobPosting) => await Employer.findById(jobPosting.EmployerID)
+        Employers: async (jobPosting) => await Employers.findById(jobPosting.EmployerID)
     },
     Application: {
-        // Resolve linked professional and job posting details
-        Professional: async (application) => await Professional.findById(application.ProfessionalID),
-        JobPosting: async (application) => await JobPosting.find(application.JobPostingID)
+        // Correct the field to singular as per the schema
+        Professionals: async (application) => await Professionals.findById(application.ProfessionalID),
+        // Ensure other fields are resolved appropriately
+        JobPostings: async (application) => await JobPosting.findById(application.JobPostingID)
     },
     Mutation: {
         addEmployer: async (parent, args) => {
-            const newEmployer = new Employer(args);
+            const newEmployer = new Employers(args);
             return newEmployer.save();
         },
         addProfessional: async (parent, args) => {
-            const newProfessional = new Professional(args);
+            const newProfessional = new Professionals(args);
             return newProfessional.save();
         },
         addJobPosting: async (parent, args) => {
@@ -61,11 +62,11 @@ export const resolvers = {
 
         updateEmployer: async (parent, args) => {
             const { EmployerID, ...rest } = args;
-            return Employer.findByIdAndUpdate(EmployerID, rest, { new: true });
+            return Employers.findByIdAndUpdate(EmployerID, rest, { new: true });
         },
         updateProfessional: async (parent, args) => {
             const { ProfessionalID, ...rest } = args;
-            return Professional.findByIdAndUpdate(ProfessionalID, rest, { new: true });
+            return Professionals.findByIdAndUpdate(ProfessionalID, rest, { new: true });
         },
         updateJobPosting: async (parent, args) => {
             const { JobPostingID, ...rest } = args;
@@ -77,10 +78,10 @@ export const resolvers = {
         },
 
         deleteEmployer: async (parent, { EmployerID }) => {
-            return Employer.findByIdAndDelete(EmployerID);
+            return Employers.findByIdAndDelete(EmployerID);
         },
         deleteProfessional: async (parent, { ProfessionalID }) => {
-            return Professional.findByIdAndDelete(ProfessionalID);
+            return Professionals.findByIdAndDelete(ProfessionalID);
         },
         deleteJobPosting: async (parent, { JobPostingID }) => {
             return JobPosting.findByIdAndDelete(JobPostingID);
