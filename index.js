@@ -12,6 +12,7 @@ import './models/employers.js';
 import './models/professionals.js';
 import './models/application.js';
 import './models/jobPosting.js';
+import './models/resume.js';
 
 // Load data resources
 import { typeDefs } from './data/schema_db.js';

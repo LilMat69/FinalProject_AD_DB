@@ -6,7 +6,7 @@ const professionalsSchema = new mongoose.Schema({
     LastName: { type: String, required: true },
     Sex: {type: String },
     ApplicationID: { type: Number, required: true},
-    Resume: { type: String, required: true }
+    ResumeID: { type: Number, required: true }
 });
 
 mongoose.model('Professionals', professionalsSchema);

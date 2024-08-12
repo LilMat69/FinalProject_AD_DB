@@ -9,7 +9,8 @@ const employersSchema = new mongoose.Schema({
     Country: { type: String, required: true },
     City: { type: String, required: true },
     Address: { type: String, required: true },
-    JobPostingID: { type: Number, required: true }
+    JobPostingID: { type: Number, required: true },
+    Type: {type: String, required: true}
 });
 
 mongoose.model('Employers', employersSchema);
