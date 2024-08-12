@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const professionalsSchema = new mongoose.Schema({
-    ProfessionalID: { type: mongoose.Schema.Types.ObjectId, required: true, unique: true },
+    ProfessionalID: { type: Number, required: true, unique: true },
     FirstName: { type: String, required: true },
     LastName: { type: String, required: true },
-    Sex: {type: String },
+    Sex: {type: String, required: true },
     ApplicationID: { type: Number, required: true},
     ResumeID: { type: Number, required: true }
 });
