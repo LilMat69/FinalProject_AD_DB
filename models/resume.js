@@ -7,4 +7,4 @@ const resumeSchema = new mongoose.Schema({
     Experience: [{ type: String }],
 });
 
-mongoose.model('Resume', resumeSchema);
+mongoose.model('resumes', resumeSchema);

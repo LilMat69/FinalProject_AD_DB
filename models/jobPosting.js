@@ -12,4 +12,4 @@ const jobPostingSchema = new mongoose.Schema({
     ExpiryDate: { type: Date, required: true }
 });
 
-mongoose.model('JobPosting', jobPostingSchema);
+mongoose.model('jobpostings', jobPostingSchema);

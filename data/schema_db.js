@@ -1,5 +1,5 @@
 export const typeDefs = `#graphql
-    type Employers {
+    type Employer {
         EmployerID: Int!,
         CompanyName: String!,
         ContactName: String,
@@ -8,24 +8,27 @@ export const typeDefs = `#graphql
         Country: String!,
         City: String!,
         Address: String!,
-        JobPostings: [JobPosting]!
+        JobPostingID: ID!,
+        JobPostings: JobPosting! 
     }
 
-    type Professionals {
+
+    type Professional {
         ProfessionalID: Int!,
         FirstName: String!,
         LastName: String!,
         Sex: String!,
         Professions: [String]!,
+        ApplicationID: ID!,
         Applications: [Application]!,
-        ResumeID: Int!,
-        Resume: Resume!,
+        ResumeID: ID!,
+        Resumes: [Resume]!
     }
 
     type JobPosting {
         JobPostingID: Int!,
-        EmployerID: Int!,
-        Employers: Employers!,
+        EmployerID: ID!,
+        Employers: Employer!,
         Title: String!,
         Description: String!,
         Requirements: [String]!,
@@ -37,50 +40,52 @@ export const typeDefs = `#graphql
 
     type Application {
         ApplicationID: Int!,
-        Professionals: [Professionals]!,
-        JobPostings: [JobPosting]!,
+        ProfessionalID: Int!,
+        Professionals: Professional!,
+        EmployerID: ID!,
+        Employers: Employer!,
         ApplicationDate: String!,
         Status: String!
     }
 
     type Resume {
         ResumeID: Int!,
+        ProfessionalID: Int!,
         Titles: [String]!,
         Experience: [String]!,
-        Professionals: [Professionals]]!,
     }
 
     type Query {
-        employers: [Employers]!,
-        employer(EmployerID: Int!): Employers,
+        allEmployers: [Employer]!,
+        employer(EmployerID: Int!): Employer,
 
-        professionals: [Professionals]!,
-        professional(ProfessionalID: Int!): Professionals,
+        allProfessionals: [Professional]!,
+        professional(ProfessionalID: Int!): Professional,
 
-        jobPostings: [JobPosting]!,
+        allJobPostings: [JobPosting]!,
         jobPosting(JobPostingID: Int!): JobPosting,
 
-        applications: [Application]!,
+        allApplications: [Application]!,
         application(ApplicationID: Int!): Application
     }
-    type Mutation {
-        addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employers,
-        addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Email: String!, Phone: String, Address: String, Professions: [String]!): Professionals,
-        addResume(ResumeID: Int!, ProfessionalID: Int!, Titles: [String]!, Experience: [String]!): Resume,
-        addJobPosting(JobPostingID: Int!, EmployerID: Int!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
-        addApplication(ApplicationID: Int!, ProfessionalID: Int!, JobPostingID: Int!, ApplicationDate: String!): Application,
 
-        updateEmployer(EmployerID: Int!, CompanyName: String, ContactName: String, ContactTitle: String, Industry: String, Country: String, City: String, Address: String): Employers,
-        updateProfessional(ProfessionalID: Int!, FirstName: String, LastName: String, Email: String, Phone: String, Address: String, Professions: [String], ResumeXML: String): Professionals,
+    type Mutation {
+        addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employer,
+        addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Sex: String!, Professions: [String]!, ResumeID: ID!): Professional,
+        addResume(ResumeID: Int!, ProfessionalID: Int!, Titles: [String]!, Experience: [String]!): Resume,
+        addJobPosting(JobPostingID: Int!, EmployerID: Int!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, Status: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
+        addApplication(ApplicationID: Int!, ProfessionalID: ID!,EmployerID: ID!, JobPostingID: ID!, ApplicationDate: String!, Status: String, Comments: [String]): Application,
+
+        updateEmployer(EmployerID: Int!, CompanyName: String, ContactName: String, ContactTitle: String, Industry: String, Country: String, City: String, Address: String): Employer,
+        updateProfessional(ProfessionalID: Int!, FirstName: String, LastName: String, Sex: String, Email: String, Phone: String, Address: String, Professions: [String]): Professional,
         updateResume(ResumeID: Int!, ProfessionalID: Int!, Titles: [String]!, Experience: [String]!): Resume,
         updateJobPosting(JobPostingID: Int!, EmployerID: Int, Title: String, Description: String, Requirements: [String], Location: String, PostedDate: String, ExpiryDate: String): JobPosting,
         updateApplication(ApplicationID: Int!, ProfessionalID: Int, JobPostingID: Int, ApplicationDate: String, Status: String): Application,
 
-        deleteEmployer(EmployerID: Int!): Employers,
-        deleteProfessional(ProfessionalID: Int!): Professionals,
+        deleteEmployer(EmployerID: Int!): Employer,
+        deleteProfessional(ProfessionalID: Int!): Professional,
         deleteResume(ResumeID: Int!): Resume,
         deleteJobPosting(JobPostingID: Int!): JobPosting,
         deleteApplication(ApplicationID: Int!): Application
     }
-
 `;

@@ -1,49 +1,58 @@
 import mongoose from 'mongoose';
 
 // Import models
-const Employers = mongoose.model('Employers');
-const Professionals = mongoose.model('Professionals');
-const Resume = mongoose.model('Resume');
-const JobPosting = mongoose.model('JobPosting');
-const Application = mongoose.model('Application');
-
+const Employers = mongoose.model('employers');
+const Professionals = mongoose.model('professionals');
+const Resume = mongoose.model('resumes');
+const JobPosting = mongoose.model('jobpostings');  // Fixed casing inconsistency
+const Application = mongoose.model('applications');
 
 export const resolvers = {
     Query: {
-        // Fetch all employers or a specific employer
-        employers: async () => await Employers.find({}),
-        employers: async (parent, { EmployerID }) => await Employers.findOne({EmployerID: EmployerID}),
+        // Fetch all employers
+        allEmployers: async () => await Employers.find(),
+        // Fetch a specific employer by EmployerID
+        employer: async (parent, { EmployerID }) => await Employers.findOne({EmployerID: EmployerID}),
 
-        // Fetch all professionals or a specific professional
-        professionals: async () => await Professionals.find({}),
-        professionals: async (parent, { ProfessionalID }) => await Professionals.findOne({ProfessionalID: ProfessionalID}),
-
+        // Fetch all professionals
+        allProfessionals: async () => await Professionals.find(),
+        // Fetch a specific professional by ProfessionalID
+        professional: async (parent, { ProfessionalID }) => await Professionals.findOne({ProfessionalID: ProfessionalID}),
         
-        // Fetch all job postings or a specific job posting
-        jobPostings: async () => await JobPosting.find({}),
+        // Fetch all job postings
+        allJobPostings: async () => await JobPosting.find(),
+        // Fetch a specific job posting by JobPostingID
         jobPosting: async (parent, { JobPostingID }) => await JobPosting.findOne({JobPostingID: JobPostingID}),
 
-        // Fetch all applications or a specific application
-        applications: async () => await Application.find({}),
+        // Fetch all applications
+        allApplications: async () => await Application.find(),
+        // Fetch a specific application by ApplicationID
         application: async (parent, { ApplicationID }) => await Application.findOne({ApplicationID: ApplicationID}),
     },
-    Employers: {
+    Employer: {
         // Resolve the job postings for each employer
-        JobPostings: async (employers) => await JobPosting.find({ EmployerID: employers.EmployerID })
+        JobPostings: async (employer) => await JobPosting.find({ EmployerID: employer.EmployerID })
     },
-    Professionals: {
+    Professional: {
         // Resolve the applications for each professional
-        Applications: async (professionals) => await Application.find({ ProfessionalID: professionals.ProfessionalID })
+        Applications: async (professionals) => await Application.find({ ProfessionalID: professionals.ProfessionalID }),
+        Resumes: async(resumes) => await Resume.find({ResumeID: resumes.ResumeID})
     },
     JobPosting: {
         // Resolve the employer details for each job posting
         Employers: async (jobPosting) => await Employers.findById(jobPosting.EmployerID)
     },
     Application: {
-        // Correct the field to singular as per the schema
-        Professionals: async (application) => await Professionals.findById(application.ProfessionalID),
-        // Ensure other fields are resolved appropriately
-        JobPostings: async (application) => await JobPosting.findById(application.JobPostingID)
+        // Resolve the professional details for each application
+        Professionals: async (application) => {
+            // Assuming application.ProfessionalID holds the custom ID value you want to query by
+            return await Professionals.findOne({ ProfessionalID: application.ProfessionalID });
+        },
+        // Resolve the employer details for each application
+        Employers: async (application) => {
+            // Assuming application.EmployerID holds the custom ID value you want to query by
+            return await Employers.findOne({ EmployerID: application.EmployerID });
+        }
     },
     Mutation: {
         addEmployer: async (parent, args) => {
@@ -66,7 +75,6 @@ export const resolvers = {
             const newApplication = new Application(args);
             return newApplication.save();
         },
-
         updateEmployer: async (parent, args) => {
             const { EmployerID, ...rest } = args;
             return Employers.findByIdAndUpdate(EmployerID, rest, { new: true });
