@@ -1,5 +1,5 @@
+import { GraphQLError } from 'graphql';
 import mongoose from 'mongoose';
-
 // Import models
 const Employers = mongoose.model('employers');
 const Professionals = mongoose.model('professionals');
@@ -72,8 +72,27 @@ export const resolvers = {
             return newJobPosting.save();
         },
         addApplication: async (parent, args) => {
-            const newApplication = new Application(args);
-            return newApplication.save();
+            try {
+                // Fetch the professional using ProfessionalID from args
+                const professional = await Professionals.findOne({ ProfessionalID: args.ProfessionalID });
+                if (!professional) {
+                    console.log("Not found")
+                    throw new Error('Professional not found');
+                }
+                // Check if the professional has reached the maximum number of applications
+                if (professional.MaxApplication >= 3) {
+                    console.log("Maximum")
+                    // Using ApolloError for better integration with Apollo Server error handling
+                    throw new GraphQLError('Maximum application limit reached for the month');
+                }
+                console.log('Create Application')
+                // Create and save a new Application
+                const newApplication = new Application(args);
+                return newApplication.save();
+            } catch (err) {
+                console.log(err);
+                throw err; // Rethrowing the error to be handled by Apollo Server
+            }
         },
         updateEmployer: async (parent, args) => {
             const { EmployerID, ...rest } = args;

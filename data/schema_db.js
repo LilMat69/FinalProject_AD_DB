@@ -19,6 +19,7 @@ export const typeDefs = `#graphql
         LastName: String!,
         Sex: String!,
         Professions: [String]!,
+        MaxApplication: Int!,
         ApplicationID: ID!,
         Applications: [Application]!,
         ResumeID: ID!,
