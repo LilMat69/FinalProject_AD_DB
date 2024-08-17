@@ -1,4 +1,9 @@
 export const typeDefs = `#graphql
+    type Professions {
+        ProfessionID: Int!,
+        Description: String!,
+    }    
+
     type Employer {
         EmployerID: Int!,
         CompanyName: String!,

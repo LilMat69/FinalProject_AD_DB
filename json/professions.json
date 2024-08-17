@@ -1,0 +1,51 @@
+[
+    {
+      "ProfessionID": 1,
+      "Description": "Software Engineer"
+    },
+    {
+      "ProfessionID": 2,
+      "Description": "Data Scientist"
+    },
+    {
+      "ProfessionID": 3,
+      "Description": "Web Developer"
+    },
+    {
+      "ProfessionID": 4,
+      "Description": "Graphic Designer"
+    },
+    {
+      "ProfessionID": 5,
+      "Description": "Project Manager"
+    },
+    {
+      "ProfessionID": 6,
+      "Description": "UX/UI Designer"
+    },
+    {
+      "ProfessionID": 7,
+      "Description": "Database Administrator"
+    },
+    {
+      "ProfessionID": 8,
+      "Description": "Network Engineer"
+    },
+    {
+      "ProfessionID": 9,
+      "Description": "Systems Analyst"
+    },
+    {
+      "ProfessionID": 10,
+      "Description": "Cybersecurity Specialist"
+    },
+    {
+      "ProfessionID": 11,
+      "Description": "Cloud Architect"
+    },
+    {
+      "ProfessionID": 12,
+      "Description": "AI Engineer"
+    }
+  ]
+  

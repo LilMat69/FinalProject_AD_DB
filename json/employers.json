@@ -1,0 +1,90 @@
+[
+  {
+    "EmployerID": 1,
+    "CompanyName": "Innovaciones Tecnológicas S.A.",
+    "ContactName": "Sebastian Mata",
+    "ContactTitle": "Gerente de RRHH",
+    "Industry": "Tecnología",
+    "Country": "México",
+    "City": "Ciudad de México",
+    "Address": "1234 Av. Paseo de la Reforma, Piso 10",
+    "Type": "Privado"
+  },
+  {
+    "EmployerID": 2,
+    "CompanyName": "Soluciones Ecológicas Ltda.",
+    "ContactName": "María Martínez",
+    "ContactTitle": "Directora de Operaciones",
+    "Industry": "Servicios Ambientales",
+    "Country": "Colombia",
+    "City": "Bogotá",
+    "Address": "5678 Calle 100, Oficina 200",
+    "Type": "Privado"
+  },
+  {
+    "EmployerID": 3,
+    "CompanyName": "Finanzas Globales S.A.",
+    "ContactName": "Kenneth Piedra",
+    "ContactTitle": "Gerente Financiero",
+    "Industry": "Servicios Financieros",
+    "Country": "Argentina",
+    "City": "Buenos Aires",
+    "Address": "7890 Av. Corrientes, Piso 15",
+    "Type": "Público"
+  },
+  {
+    "EmployerID": 4,
+    "CompanyName": "Salud y Bienestar",
+    "ContactName": "Fernanda Sirias",
+    "ContactTitle": "Directora Médica",
+    "Industry": "Salud",
+    "Country": "Chile",
+    "City": "Santiago",
+    "Address": "1011 Av. Providencia, Nivel 4",
+    "Type": "Privado"
+  },
+  {
+    "EmployerID": 5,
+    "CompanyName": "Tecnología Educativa",
+    "ContactName": "Isabel Torres",
+    "ContactTitle": "Jefa de Aprendizaje",
+    "Industry": "Educación",
+    "Country": "Perú",
+    "City": "Lima",
+    "Address": "1213 Av. Javier Prado, Piso 8",
+    "Type": "Privado"
+  },
+  {
+    "EmployerID": 6,
+    "CompanyName": "Automotriz Mundial",
+    "ContactName": "David Castro",
+    "ContactTitle": "Gerente de Producción",
+    "Industry": "Automotriz",
+    "Country": "Ecuador",
+    "City": "Quito",
+    "Address": "1415 Av. Amazonas, Piso 6",
+    "Type": "Público"
+  },
+  {
+    "EmployerID": 7,
+    "CompanyName": "Estudio Creativo",
+    "ContactName": "Camila Díaz",
+    "ContactTitle": "Directora Creativa",
+    "Industry": "Diseño",
+    "Country": "Uruguay",
+    "City": "Montevideo",
+    "Address": "1617 Calle 18 de Julio, Oficina 500",
+    "Type": "Privado"
+  },
+  {
+    "EmployerID": 8,
+    "CompanyName": "Excursiones Turísticas",
+    "ContactName": "Gabriela Hernández",
+    "ContactTitle": "Gerente de Tours",
+    "Industry": "Turismo",
+    "Country": "Venezuela",
+    "City": "Caracas",
+    "Address": "1819 Av. Urdaneta, Piso 3",
+    "Type": "Privado"
+  }
+]
