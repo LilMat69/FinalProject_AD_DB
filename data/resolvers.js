@@ -18,6 +18,21 @@ export const resolvers = {
         allProfessionals: async () => await Professionals.find(),
         // Fetch a specific professional by ProfessionalID
         professional: async (parent, { ProfessionalID }) => await Professionals.findOne({ProfessionalID: ProfessionalID}),
+
+        // Fetch professionals by gender and count them
+        countProfessionalsByGender: async () => {
+            try {
+                const maleCount = await Professionals.countDocuments({ Sex: 'M' });
+                const femaleCount = await Professionals.countDocuments({ Sex: 'F' });
+                return {
+                    maleCount,
+                    femaleCount
+                };
+            } catch (err) {
+                console.error(err);
+                throw new GraphQLError('Error fetching professional counts by gender');
+            }
+        },
         
         // Fetch all job postings
         allJobPostings: async () => await JobPosting.find(),
