@@ -23,7 +23,14 @@ export const typeDefs = `#graphql
         ApplicationID: ID!,
         Applications: [Application]!,
         ResumeID: ID!,
-        Resumes: [Resume]!
+        Resumes: [Resume]!,
+        Area: String! 
+    }
+
+    type AreaStats {
+        area: String!,
+        count: Int!,
+        percentage: Float!
     }
 
     type GenderCount {
@@ -74,7 +81,9 @@ export const typeDefs = `#graphql
         allApplications: [Application]!,
         application(ApplicationID: Int!): Application,
 
-        countProfessionalsByGender: GenderCount!
+        countProfessionalsByGender: GenderCount!,
+
+        countProfessionalsByArea: [AreaStats]!
     }
 
     type Mutation {
