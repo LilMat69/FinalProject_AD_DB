@@ -26,6 +26,11 @@ export const typeDefs = `#graphql
         Resumes: [Resume]!
     }
 
+    type GenderCount {
+        maleCount: Int!,
+        femaleCount: Int!
+    }
+
     type JobPosting {
         JobPostingID: Int!,
         EmployerID: ID!,
@@ -67,7 +72,9 @@ export const typeDefs = `#graphql
         jobPosting(JobPostingID: Int!): JobPosting,
 
         allApplications: [Application]!,
-        application(ApplicationID: Int!): Application
+        application(ApplicationID: Int!): Application,
+
+        countProfessionalsByGender: GenderCount!
     }
 
     type Mutation {
