@@ -1,10 +1,15 @@
 // Call ApolloServer and startStandaloneServer
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+import dotenv from 'dotenv'
+
+dotenv.config();
+const user = process.env['DATABASE_USER'];
+const password = process.env['DB_PASSWORD'];
 
 // Connection to MongoDB
 import mongoose from "mongoose";
-mongoose.connect('mongodb://localhost:27017/', {dbName: 'Enterprise'})
+mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.6erkb.mongodb.net/`, {dbName: 'Enterprise'})
     .then(r  => console.log('Connected to MongoDB'));
 
 // Load models
