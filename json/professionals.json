@@ -1,0 +1,202 @@
+[
+  {
+    "ProfessionalID": 1,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Sex": "Male",
+    "MaxApplication": 5,
+    "ApplicationID": 101,
+    "ResumeID": 201,
+    "Area": "Ingeniería"
+  },
+  {
+    "ProfessionalID": 2,
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "Sex": "Female",
+    "MaxApplication": 3,
+    "ApplicationID": 102,
+    "ResumeID": 202,
+    "Area": "Ciencias Sociales"
+  },
+  {
+    "ProfessionalID": 3,
+    "FirstName": "Alice",
+    "LastName": "Johnson",
+    "Sex": "Female",
+    "MaxApplication": 7,
+    "ApplicationID": 103,
+    "ResumeID": 203,
+    "Area": "Educación"
+  },
+  {
+    "ProfessionalID": 4,
+    "FirstName": "Bob",
+    "LastName": "Brown",
+    "Sex": "Male",
+    "MaxApplication": 2,
+    "ApplicationID": 104,
+    "ResumeID": 204,
+    "Area": "Tecnología"
+  },
+  {
+    "ProfessionalID": 5,
+    "FirstName": "Charlie",
+    "LastName": "Davis",
+    "Sex": "Non-binary",
+    "MaxApplication": 4,
+    "ApplicationID": 105,
+    "ResumeID": 205,
+    "Area": "Arte y Humanidades"
+  },
+  {
+    "ProfessionalID": 6,
+    "FirstName": "Emily",
+    "LastName": "Wilson",
+    "Sex": "Female",
+    "MaxApplication": 6,
+    "ApplicationID": 106,
+    "ResumeID": 206,
+    "Area": "Ciencias de la Salud"
+  },
+  {
+    "ProfessionalID": 7,
+    "FirstName": "Michael",
+    "LastName": "Taylor",
+    "Sex": "Male",
+    "MaxApplication": 8,
+    "ApplicationID": 107,
+    "ResumeID": 207,
+    "Area": "Ciencias Administrativas"
+  },
+  {
+    "ProfessionalID": 8,
+    "FirstName": "Olivia",
+    "LastName": "Anderson",
+    "Sex": "Female",
+    "MaxApplication": 3,
+    "ApplicationID": 108,
+    "ResumeID": 208,
+    "Area": "Ingeniería"
+  },
+  {
+    "ProfessionalID": 9,
+    "FirstName": "Ethan",
+    "LastName": "Thomas",
+    "Sex": "Male",
+    "MaxApplication": 1,
+    "ApplicationID": 109,
+    "ResumeID": 209,
+    "Area": "Ciencias Sociales"
+  },
+  {
+    "ProfessionalID": 10,
+    "FirstName": "Sophia",
+    "LastName": "Martinez",
+    "Sex": "Female",
+    "MaxApplication": 5,
+    "ApplicationID": 110,
+    "ResumeID": 210,
+    "Area": "Educación"
+  },
+  {
+    "ProfessionalID": 11,
+    "FirstName": "Liam",
+    "LastName": "Garcia",
+    "Sex": "Male",
+    "MaxApplication": 2,
+    "ApplicationID": 111,
+    "ResumeID": 211,
+    "Area": "Tecnología"
+  },
+  {
+    "ProfessionalID": 12,
+    "FirstName": "Ava",
+    "LastName": "Rodriguez",
+    "Sex": "Female",
+    "MaxApplication": 6,
+    "ApplicationID": 112,
+    "ResumeID": 212,
+    "Area": "Arte y Humanidades"
+  },
+  {
+    "ProfessionalID": 13,
+    "FirstName": "Noah",
+    "LastName": "Martinez",
+    "Sex": "Male",
+    "MaxApplication": 4,
+    "ApplicationID": 113,
+    "ResumeID": 213,
+    "Area": "Ciencias de la Salud"
+  },
+  {
+    "ProfessionalID": 14,
+    "FirstName": "Isabella",
+    "LastName": "Hernandez",
+    "Sex": "Female",
+    "MaxApplication": 7,
+    "ApplicationID": 114,
+    "ResumeID": 214,
+    "Area": "Ciencias Administrativas"
+  },
+  {
+    "ProfessionalID": 15,
+    "FirstName": "James",
+    "LastName": "Lopez",
+    "Sex": "Male",
+    "MaxApplication": 3,
+    "ApplicationID": 115,
+    "ResumeID": 215,
+    "Area": "Ingeniería"
+  },
+  {
+    "ProfessionalID": 16,
+    "FirstName": "Mia",
+    "LastName": "Gonzalez",
+    "Sex": "Female",
+    "MaxApplication": 5,
+    "ApplicationID": 116,
+    "ResumeID": 216,
+    "Area": "Ciencias Sociales"
+  },
+  {
+    "ProfessionalID": 17,
+    "FirstName": "Benjamin",
+    "LastName": "Wilson",
+    "Sex": "Male",
+    "MaxApplication": 2,
+    "ApplicationID": 117,
+    "ResumeID": 217,
+    "Area": "Educación"
+  },
+  {
+    "ProfessionalID": 18,
+    "FirstName": "Charlotte",
+    "LastName": "Lee",
+    "Sex": "Female",
+    "MaxApplication": 8,
+    "ApplicationID": 118,
+    "ResumeID": 218,
+    "Area": "Tecnología"
+  },
+  {
+    "ProfessionalID": 19,
+    "FirstName": "Oliver",
+    "LastName": "Perez",
+    "Sex": "Male",
+    "MaxApplication": 4,
+    "ApplicationID": 119,
+    "ResumeID": 219,
+    "Area": "Ciencias de la Salud"
+  },
+  {
+    "ProfessionalID": 20,
+    "FirstName": "Amelia",
+    "LastName": "Young",
+    "Sex": "Female",
+    "MaxApplication": 3,
+    "ApplicationID": 120,
+    "ResumeID": 220,
+    "Area": "Ciencias Administrativas"
+  }
+]

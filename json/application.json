@@ -1,0 +1,162 @@
+[
+  {
+    "ApplicationID": 1,
+    "ProfessionalID": 1,
+    "EmployerID": 1,
+    "ApplicationDate": "2024-08-01T10:00:00Z",
+    "Status": "Applied",
+    "Comments": "Looking forward to the opportunity."
+  },
+  {
+    "ApplicationID": 2,
+    "ProfessionalID": 2,
+    "EmployerID": 2,
+    "ApplicationDate": "2024-08-02T11:30:00Z",
+    "Status": "Reviewed",
+    "Comments": "Initial review completed."
+  },
+  {
+    "ApplicationID": 3,
+    "ProfessionalID": 3,
+    "EmployerID": 3,
+    "ApplicationDate": "2024-08-03T09:15:00Z",
+    "Status": "Interview Scheduled",
+    "Comments": "Interview scheduled for next week."
+  },
+  {
+    "ApplicationID": 4,
+    "ProfessionalID": 4,
+    "EmployerID": 4,
+    "ApplicationDate": "2024-08-04T14:00:00Z",
+    "Status": "Applied",
+    "Comments": "Application submitted with a strong resume."
+  },
+  {
+    "ApplicationID": 5,
+    "ProfessionalID": 5,
+    "EmployerID": 5,
+    "ApplicationDate": "2024-08-05T08:45:00Z",
+    "Status": "Rejected",
+    "Comments": "Did not meet all requirements."
+  },
+  {
+    "ApplicationID": 6,
+    "ProfessionalID": 6,
+    "EmployerID": 6,
+    "ApplicationDate": "2024-08-06T13:30:00Z",
+    "Status": "Applied",
+    "Comments": "Application in review."
+  },
+  {
+    "ApplicationID": 7,
+    "ProfessionalID": 7,
+    "EmployerID": 7,
+    "ApplicationDate": "2024-08-07T12:00:00Z",
+    "Status": "Interview Scheduled",
+    "Comments": "Interview scheduled for this Friday."
+  },
+  {
+    "ApplicationID": 8,
+    "ProfessionalID": 8,
+    "EmployerID": 8,
+    "ApplicationDate": "2024-08-08T10:00:00Z",
+    "Status": "Applied",
+    "Comments": "Eager to contribute to the team."
+  },
+  {
+    "ApplicationID": 9,
+    "ProfessionalID": 9,
+    "EmployerID": 9,
+    "ApplicationDate": "2024-08-09T15:00:00Z",
+    "Status": "Rejected",
+    "Comments": "Not selected for further review."
+  },
+  {
+    "ApplicationID": 10,
+    "ProfessionalID": 10,
+    "EmployerID": 10,
+    "ApplicationDate": "2024-08-10T11:00:00Z",
+    "Status": "Reviewed",
+    "Comments": "Reviewed and under consideration."
+  },
+  {
+    "ApplicationID": 11,
+    "ProfessionalID": 11,
+    "EmployerID": 11,
+    "ApplicationDate": "2024-08-11T14:00:00Z",
+    "Status": "Applied",
+    "Comments": "Application submitted with updated resume."
+  },
+  {
+    "ApplicationID": 12,
+    "ProfessionalID": 12,
+    "EmployerID": 12,
+    "ApplicationDate": "2024-08-12T09:00:00Z",
+    "Status": "Interview Scheduled",
+    "Comments": "Interview scheduled for next Monday."
+  },
+  {
+    "ApplicationID": 13,
+    "ProfessionalID": 13,
+    "EmployerID": 13,
+    "ApplicationDate": "2024-08-13T10:30:00Z",
+    "Status": "Applied",
+    "Comments": "Application received and under review."
+  },
+  {
+    "ApplicationID": 14,
+    "ProfessionalID": 14,
+    "EmployerID": 14,
+    "ApplicationDate": "2024-08-14T11:30:00Z",
+    "Status": "Reviewed",
+    "Comments": "Review in progress."
+  },
+  {
+    "ApplicationID": 15,
+    "ProfessionalID": 15,
+    "EmployerID": 15,
+    "ApplicationDate": "2024-08-15T12:00:00Z",
+    "Status": "Rejected",
+    "Comments": "Position filled by another candidate."
+  },
+  {
+    "ApplicationID": 16,
+    "ProfessionalID": 16,
+    "EmployerID": 16,
+    "ApplicationDate": "2024-08-16T13:00:00Z",
+    "Status": "Interview Scheduled",
+    "Comments": "Interview scheduled for Wednesday."
+  },
+  {
+    "ApplicationID": 17,
+    "ProfessionalID": 17,
+    "EmployerID": 17,
+    "ApplicationDate": "2024-08-17T14:30:00Z",
+    "Status": "Applied",
+    "Comments": "Application has been submitted."
+  },
+  {
+    "ApplicationID": 18,
+    "ProfessionalID": 18,
+    "EmployerID": 18,
+    "ApplicationDate": "2024-08-18T10:00:00Z",
+    "Status": "Reviewed",
+    "Comments": "Application reviewed, awaiting decision."
+  },
+  {
+    "ApplicationID": 19,
+    "ProfessionalID": 19,
+    "EmployerID": 19,
+    "ApplicationDate": "2024-08-19T12:30:00Z",
+    "Status": "Applied",
+    "Comments": "Application submitted with all necessary documents."
+  },
+  {
+    "ApplicationID": 20,
+    "ProfessionalID": 20,
+    "EmployerID": 20,
+    "ApplicationDate": "2024-08-20T15:00:00Z",
+    "Status": "Rejected",
+    "Comments": "Application was not successful."
+  }
+]

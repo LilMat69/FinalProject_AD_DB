@@ -1,0 +1,152 @@
+[
+  {
+    "JobPostingID": 2001,
+    "EmployerID": "E001",
+    "Title": "Software Developer",
+    "Description": "Develop and maintain web applications using JavaScript, React, and Node.js.",
+    "Requirements": [
+      "Bachelor's degree in Computer Science",
+      "2+ years of experience in web development",
+      "Proficiency in JavaScript and React"
+    ],
+    "Location": "San José, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-01T00:00:00.000Z",
+    "ExpiryDate": "2024-09-01T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2002,
+    "EmployerID": "E002",
+    "Title": "Graphic Designer",
+    "Description": "Create visual concepts and designs for marketing materials, websites, and social media.",
+    "Requirements": [
+      "Bachelor's degree in Graphic Design",
+      "3+ years of experience in design",
+      "Proficiency in Adobe Creative Suite"
+    ],
+    "Location": "Alajuela, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-05T00:00:00.000Z",
+    "ExpiryDate": "2024-09-05T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2003,
+    "EmployerID": "E003",
+    "Title": "Project Manager",
+    "Description": "Manage software development projects and coordinate teams to ensure timely delivery.",
+    "Requirements": [
+      "Bachelor's degree in Business Administration",
+      "5+ years of experience in project management",
+      "PMP certification preferred"
+    ],
+    "Location": "Heredia, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-10T00:00:00.000Z",
+    "ExpiryDate": "2024-09-10T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2004,
+    "EmployerID": "E004",
+    "Title": "Data Scientist",
+    "Description": "Analyze complex data sets to drive business insights and support decision-making.",
+    "Requirements": [
+      "Bachelor's degree in Data Science",
+      "3+ years of experience in data analysis",
+      "Proficiency in Python and R"
+    ],
+    "Location": "Cartago, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-15T00:00:00.000Z",
+    "ExpiryDate": "2024-09-15T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2005,
+    "EmployerID": "E005",
+    "Title": "Marketing Specialist",
+    "Description": "Develop and implement marketing strategies to promote products and services.",
+    "Requirements": [
+      "Bachelor's degree in Marketing",
+      "4+ years of experience in marketing",
+      "Strong analytical and communication skills"
+    ],
+    "Location": "Puntarenas, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-20T00:00:00.000Z",
+    "ExpiryDate": "2024-09-20T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2006,
+    "EmployerID": "E006",
+    "Title": "Cybersecurity Analyst",
+    "Description": "Monitor and protect company systems from cyber threats and vulnerabilities.",
+    "Requirements": [
+      "Bachelor's degree in Information Security",
+      "2+ years of experience in cybersecurity",
+      "Proficiency in network security tools"
+    ],
+    "Location": "San José, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-25T00:00:00.000Z",
+    "ExpiryDate": "2024-09-25T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2007,
+    "EmployerID": "E007",
+    "Title": "Human Resources Manager",
+    "Description": "Oversee HR operations, including recruitment, employee relations, and benefits management.",
+    "Requirements": [
+      "Bachelor's degree in Human Resources",
+      "5+ years of experience in HR management",
+      "Strong leadership and interpersonal skills"
+    ],
+    "Location": "Limón, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-28T00:00:00.000Z",
+    "ExpiryDate": "2024-09-28T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2008,
+    "EmployerID": "E008",
+    "Title": "Mechanical Engineer",
+    "Description": "Design, develop, and test mechanical systems and products.",
+    "Requirements": [
+      "Bachelor's degree in Mechanical Engineering",
+      "3+ years of experience in mechanical design",
+      "Proficiency in CAD software"
+    ],
+    "Location": "Guanacaste, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-30T00:00:00.000Z",
+    "ExpiryDate": "2024-09-30T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2009,
+    "EmployerID": "E009",
+    "Title": "Content Writer",
+    "Description": "Create engaging content for blogs, articles, and social media.",
+    "Requirements": [
+      "Bachelor's degree in English or Communications",
+      "2+ years of experience in content writing",
+      "Excellent writing and editing skills"
+    ],
+    "Location": "San José, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-08-31T00:00:00.000Z",
+    "ExpiryDate": "2024-09-31T00:00:00.000Z"
+  },
+  {
+    "JobPostingID": 2010,
+    "EmployerID": "E010",
+    "Title": "Supply Chain Coordinator",
+    "Description": "Manage the supply chain process, including procurement, logistics, and inventory control.",
+    "Requirements": [
+      "Bachelor's degree in Supply Chain Management",
+      "3+ years of experience in supply chain management",
+      "Strong organizational and problem-solving skills"
+    ],
+    "Location": "Alajuela, Costa Rica",
+    "Status": "Open",
+    "PostedDate": "2024-09-01T00:00:00.000Z",
+    "ExpiryDate": "2024-10-01T00:00:00.000Z"
+  }
+]

@@ -88,7 +88,7 @@ export const typeDefs = `#graphql
 
     type Mutation {
         addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employer,
-        addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Sex: String!, ResumeID: ID!): Professional,
+        addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Sex: String!, ResumeID: ID!, Area: String!): Professional,
         addResume(ResumeID: Int!, ProfessionalID: Int!, Titles: [String]!, Experience: [String]!): Resume,
         addJobPosting(JobPostingID: Int!, EmployerID: Int!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, Status: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
         addApplication(ApplicationID: Int!, ProfessionalID: ID!,EmployerID: ID!, JobPostingID: ID!, ApplicationDate: String!, Status: String, Comments: [String]): Application,
