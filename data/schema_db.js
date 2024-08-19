@@ -9,7 +9,7 @@ export const typeDefs = `#graphql
         City: String!,
         Address: String!,
         JobPostingID: ID!,
-        JobPostings: JobPosting! 
+        JobPostings: [JobPosting]! 
     }
 
 
@@ -41,7 +41,7 @@ export const typeDefs = `#graphql
     type JobPosting {
         JobPostingID: Int!,
         EmployerID: ID!,
-        Employers: Employer!,
+        Employers: [Employer]!,
         Title: String!,
         Description: String!,
         Requirements: [String]!,

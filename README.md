@@ -67,11 +67,23 @@ query AllEmployers {
 <p>Specific Information (professional)</p>
 
 ```bash
-#Initiate project dependencies
-npm install
-#Start Project
-npm run dev
+query Query($professionalId: Int!) {
+  professional(ProfessionalID: $professionalId) {
+    FirstName
+    LastName
+    Resumes {
+      Titles
+      Experience
+    }
+    Applications {
+      Status
+      ApplicationDate
+    }
+  }
+}
 ```
+> Remember to send data into the *JSON* section, or else the query will not work
+
 
 <p>Inventory Information of Vacant Positions</p>
 
