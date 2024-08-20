@@ -8,10 +8,16 @@ npm install
 #Start Project
 npm run dev
 ```
+# Database Diagram
+<p align="center">
+    <img alt="Prisma Image" src="./images/DB_Propousal.png" width="600" height="680" />
+</p>
+
+# Mongo Atlas Migration
 
 # Testing Querys
 
-<p><b>Registry of Bidders</p>
+<p align="center"><b>Registry of Bidders</p>
 
 ```bash
 mutation Mutation($employerId: Int!, $companyName: String!, $industry: String!, $country: String!, $city: String!, $address: String!) {
@@ -22,7 +28,7 @@ mutation Mutation($employerId: Int!, $companyName: String!, $industry: String!, 
 ```
 > Remember to send data into the *JSON* section, or else the query will not work
 
-<p>Case File Registration</p>
+<p align="center">Case File Registration</p>
 
 ```bash
 mutation Mutation($resumeId: Int!, $professionalId: Int!, $titles: [String]!, $experience: [String]!) {
@@ -34,7 +40,7 @@ mutation Mutation($resumeId: Int!, $professionalId: Int!, $titles: [String]!, $e
 ```
 > Remember to send data into the *JSON* section, or else the query will not work
 
-<p>Job Vacancy Announcement</p>
+<p align="center">Job Vacancy Announcement</p>
 
 ```bash
 query Query {
@@ -46,7 +52,7 @@ query Query {
 }
 ```
 
-<p>General Information (employer)</p>
+<p align="center">General Information (employer)</p>
 
 ```bash
 query AllEmployers {
@@ -64,7 +70,7 @@ query AllEmployers {
 }
 ```
 
-<p>Specific Information (professional)</p>
+<p align="center">Specific Information (professional)</p>
 
 ```bash
 query Query($professionalId: Int!) {
@@ -85,7 +91,7 @@ query Query($professionalId: Int!) {
 > Remember to send data into the *JSON* section, or else the query will not work
 
 
-<p>Inventory Information of Vacant Positions</p>
+<p align="center">Inventory Information of Vacant Positions</p>
 
 ```bash
 query Query {
@@ -98,13 +104,13 @@ query Query {
 }
 ```
 
-<p>Name of Applicants for a Specific Area</p>
+<p align="center">Name of Applicants for a Specific Area</p>
 
 ```bash
 # Coming Soon, :)
 ```
 
-<p>Number and Percentage of Registered Professionals by Area</p>
+<p align="center">Number and Percentage of Registered Professionals by Area</p>
 
 ```bash
 query Query {
@@ -116,7 +122,7 @@ query Query {
 }
 ```
 
-<p>Number of Registered Professionals by Gender</p>
+<p align="center" textColor="#00000"> Number of Registered Professionals by Gender</p>
 
 ```bash
 query Query {
@@ -126,3 +132,14 @@ query Query {
   }
 }
 ```
+# Example Images for Querying
+
+<p align="center">Job Vacancy Announcement</p>
+<p align="center">Case File Registration</p>
+<p align="center">Job Vacancy Announcement</p>
+<p align="center">General Information (employer)</p>
+<p align="center">Specific Information (professional)</p>
+<p align="center">Inventory Information of Vacant Positions</p>
+<p align="center">Name of Applicants for a Specific Area</p>
+<p align="center">Number and Percentage of Registered Professionals by Area</p>
+<p align="center" textColor="#00000"> Number of Registered Professionals by Gender</p>

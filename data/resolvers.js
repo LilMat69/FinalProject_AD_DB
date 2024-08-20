@@ -93,22 +93,27 @@ export const resolvers = {
         }
     },
     Mutation: {
+        // add new employer
         addEmployer: async (parent, args) => {
             const newEmployer = new Employers(args);
             return newEmployer.save();
         },
+        // add new professional
         addProfessional: async (parent, args) => {
             const newProfessional = new Professionals(args);
             return newProfessional.save();
         },
+        // attach resume for a professional
         addResume: async (parent, args) => {
             const newResume = new Resume(args);
             return newResume.save();
         },
+        // add new job posting to offer the professionals
         addJobPosting: async (parent, args) => {
             const newJobPosting = new JobPosting(args);
             return newJobPosting.save();
         },
+        // add new application for a professional
         addApplication: async (parent, args) => {
             try {
                 // Fetch the professional using ProfessionalID from args
@@ -132,38 +137,43 @@ export const resolvers = {
                 throw err; // Rethrowing the error to be handled by Apollo Server
             }
         },
+        // update employer
         updateEmployer: async (parent, args) => {
             const { EmployerID, ...rest } = args;
             return Employers.findByIdAndUpdate(EmployerID, rest, { new: true });
         },
+        // update professional
         updateProfessional: async (parent, args) => {
             const { ProfessionalID, ...rest } = args;
             return Professionals.findByIdAndUpdate(ProfessionalID, rest, { new: true });
         },
+        // update resume for a professional
         updateResume: async (parent, args) => {
             const { ResumeID, ...rest } = args;
             return Resume.findByIdAndUpdate(ResumeID, rest, { new: true });
         },
+        // update job posting
         updateJobPosting: async (parent, args) => {
             const { JobPostingID, ...rest } = args;
             return JobPosting.findByIdAndUpdate(JobPostingID, rest, { new: true });
         },
-        updateApplication: async (parent, args) => {
-            const { ApplicationID, ...rest } = args;
-            return Application.findByIdAndUpdate(ApplicationID, rest, { new: true });
-        },
+        // delete employer
         deleteEmployer: async (parent, { EmployerID }) => {
             return Employers.findByIdAndDelete(EmployerID);
         },
+        // delete professional
         deleteProfessional: async (parent, { ProfessionalID }) => {
             return Professionals.findByIdAndDelete(ProfessionalID);
         },
+        // delete resume
         deleteResume: async (parent, { ResumeID }) => {
             return Resume.findByIdAndDelete(ResumeID);
         },
+        // delete job posting
         deleteJobPosting: async (parent, { JobPostingID }) => {
             return JobPosting.findByIdAndDelete(JobPostingID);
         },
+        // delete application of a Job
         deleteApplication: async (parent, { ApplicationID }) => {
             return Application.findByIdAndDelete(ApplicationID);
         }
