@@ -57,6 +57,17 @@ export const resolvers = {
             }
         },
         
+        // Fetch professionals by a specific area
+        professionalsByArea: async (parent, { area }) => {
+            try {
+                const professionals = await Professionals.find({ Area: area });
+                return professionals;
+            } catch (err) {
+                console.error(err);
+                throw new GraphQLError('Error fetching professionals by area');
+            }
+        },
+        
         // Fetch all job postings
         allJobPostings: async () => await JobPosting.find(),
         // Fetch a specific job posting by JobPostingID
