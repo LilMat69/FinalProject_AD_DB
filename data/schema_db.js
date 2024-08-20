@@ -12,7 +12,6 @@ export const typeDefs = `#graphql
         JobPostings: [JobPosting]! 
     }
 
-
     type Professional {
         ProfessionalID: Int!,
         FirstName: String!,
@@ -83,7 +82,9 @@ export const typeDefs = `#graphql
 
         countProfessionalsByGender: GenderCount!,
 
-        countProfessionalsByArea: [AreaStats]!
+        countProfessionalsByArea: [AreaStats]!,
+
+        professionalsByArea(area: String!): [Professional]!  
     }
 
     type Mutation {
@@ -106,3 +107,4 @@ export const typeDefs = `#graphql
         deleteApplication(ApplicationID: Int!): Application
     }
 `;
+
