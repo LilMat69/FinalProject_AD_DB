@@ -3,6 +3,7 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import dotenv from "dotenv";
 
+// extract credentials from environment files
 dotenv.config();
 const user = process.env["DATABASE_USER"];
 const password = process.env["DB_PASSWORD"];
