@@ -48,6 +48,18 @@ mutation Mutation($employerId: Int!, $companyName: String!, $industry: String!, 
   }
 }
 ```
+
+```bash
+{ 
+  "employerId": 45,
+  "companyName": "name",  
+  "industry": "Cars",
+  "country": "CR",  
+  "city": "Puntarenas",
+  "address": "40mts sur",
+  "type": "Juridic"
+}
+```
 > Remember to send corresponding data into the *JSON* section, or else the query will not work
 
 <p align="center">Case File Registration</p>
@@ -58,6 +70,14 @@ mutation Mutation($resumeId: Int!, $professionalId: Int!, $titles: [String]!, $e
     ProfessionalID
     ResumeID
   }
+}
+```
+```bash
+{  
+  "resumeId": 5,
+  "professionalId": 8,  
+  "titles": ["Electrical Engineering", "IT manager"],
+  "experience": ["20 years of experience",            "5 years"]
 }
 ```
 > Remember to send corresponding data into the *JSON* section, or else the query will not work
@@ -88,6 +108,11 @@ query Employer($employerId: ID!) {
   }
 }
 ```
+```bash
+{
+  "employerId": 8
+}
+```
 
 <p align="center">Specific Information (professional)</p>
 
@@ -107,6 +132,11 @@ query Professional($professionalId: Int!) {
       Status
     }
   }
+}
+```
+```bash
+{
+  "professionalId": 8
 }
 ```
 > Remember to send the professionalID into the *JSON* section, or else the query will not work
