@@ -42,8 +42,8 @@ npm run dev
 <p align="center"><b>Registry of Bidders</p>
 
 ```bash
-mutation Mutation($employerId: Int!, $companyName: String!, $industry: String!, $country: String!, $city: String!, $address: String!) {
-  addEmployer(EmployerID: $employerId, CompanyName: $companyName, Industry: $industry, Country: $country, City: $city, Address: $address) {
+mutation Mutation($employerId: Int!, $companyName: String!, $industry: String!, $country: String!, $city: String!, $address: String!, $type: String!) {
+  addEmployer(EmployerID: $employerId, CompanyName: $companyName, Industry: $industry, Country: $country, City: $city, Address: $address, Type: $type) {
     EmployerID
   }
 }
@@ -77,17 +77,14 @@ query Query {
 <p align="center">General Information (employer)</p>
 
 ```bash
-query AllEmployers {
-  allEmployers {
+query Employer($employerId: ID!) {
+  employer(EmployerID: $employerId) {
     EmployerID
     ContactName
     CompanyName
-    City
-    Industry
-    JobPostings {
-      Description
-      Location
-    }
+    Address
+    Type
+    Country
   }
 }
 ```
@@ -95,17 +92,19 @@ query AllEmployers {
 <p align="center">Specific Information (professional)</p>
 
 ```bash
-query Query($professionalId: Int!) {
+query Professional($professionalId: Int!) {
   professional(ProfessionalID: $professionalId) {
-    FirstName
+    ProfessionalID
     LastName
+    FirstName
     Resumes {
-      Titles
       Experience
+      Titles
     }
+    Sex
     Applications {
-      Status
       ApplicationDate
+      Status
     }
   }
 }
@@ -162,12 +161,36 @@ query Query {
 ```
 # Example Images for Querying
 
-<p align="center">Job Vacancy Announcement</p>
+<p align="center">Registry of Bidders</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/Bidders.png" width="500" height="280" />
+</p>
 <p align="center">Case File Registration</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/Resume.png" width="500" height="280" />
+</p>
 <p align="center">Job Vacancy Announcement</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/JobOffers.png" width="500" height="280" />
+</p>
 <p align="center">General Information (employer)</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/InformationEmployer.png" width="500" height="280" />
+</p>
 <p align="center">Specific Information (professional)</p>
-<p align="center">Inventory Information of Vacant Positions</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/Professional.png" width="500" height="280" />
+</p>
+
 <p align="center">Name of Applicants for a Specific Area</p>
-<p align="center">Number and Percentage of Registered Professionals by Area</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/ProfessionalsByArea.png" width="500" height="280" />
+</p>
+<p align="center">Number and Percentage of Registered Professionals by </p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/CountByArea.png" width="500" height="280" />
+</p>
 <p align="center" textColor="#00000"> Number of Registered Professionals by Gender</p>
+<p align="center">
+    <img alt="Prisma Image" src="./images/testing_examples/CountProfesionalByGender.png" width="500" height="280" />
+</p>

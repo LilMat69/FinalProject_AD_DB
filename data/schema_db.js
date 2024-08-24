@@ -9,7 +9,8 @@ export const typeDefs = `#graphql
         City: String!,
         Address: String!,
         JobPostingID: ID!,
-        JobPostings: [JobPosting]! 
+        JobPostings: [JobPosting]!,
+        Type: String! 
     }
 
     type Professional {
@@ -69,7 +70,7 @@ export const typeDefs = `#graphql
 
     type Query {
         allEmployers: [Employer]!,
-        employer(EmployerID: Int!): Employer,
+        employer(EmployerID: ID!): Employer,
 
         allProfessionals: [Professional]!,
         professional(ProfessionalID: Int!): Professional,
@@ -88,7 +89,7 @@ export const typeDefs = `#graphql
     }
 
     type Mutation {
-        addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!): Employer,
+        addEmployer(EmployerID: Int!, CompanyName: String!, ContactName: String, ContactTitle: String, Industry: String!, Country: String!, City: String!, Address: String!, Type: String! ): Employer,
         addProfessional(ProfessionalID: Int!, FirstName: String!, LastName: String!, Sex: String!, ResumeID: ID!, Area: String!): Professional,
         addResume(ResumeID: Int!, ProfessionalID: Int!, Titles: [String]!, Experience: [String]!): Resume,
         addJobPosting(JobPostingID: Int!, EmployerID: Int!, Title: String!, Description: String!, Requirements: [String]!, Location: String!, Status: String!, PostedDate: String!, ExpiryDate: String!): JobPosting,
